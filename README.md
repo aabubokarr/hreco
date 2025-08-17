@@ -12,16 +12,24 @@ This repository contains the implementation of the Machine Learning-based projec
 - [License](#license)
 
 ## Introduction
-This project focuses on leveraging machine learning techniques to solve the communication gap between those who don't know sign language. The aim is to translate sign language into text to speech.
+This project focuses on leveraging machine learning techniques to solve the communication gap between those who don't know sign language.  
+The aim is to translate sign language into text (and optionally speech) using a trained deep learning model.
 
 ## Features
-- Hand Sign Recognition (ASL)
+- Hand Landmark Extraction using MediaPipe  
+- ASL Hand Sign Recognition using TensorFlow/Keras  
+- Image-based Prediction (`test.py`)  
+- Real-time Prediction via Webcam (`main.py`)  
+- Flask-based Web Application (`app.py`)
 
 ## Technologies Used
-- Python
-- Flask
-- TensorFlow
-- Numpy
+- Python  
+- Flask  
+- TensorFlow / Keras  
+- OpenCV  
+- MediaPipe  
+- scikit-learn  
+- Numpy  
 
 ## Setup Instructions
 1. Clone the repository:
@@ -34,19 +42,31 @@ This project focuses on leveraging machine learning techniques to solve the comm
     ```
 3. Install dependencies:
     ```bash
-    pip install flask scikit-learn opencv-python tensorflow numpy
+    pip install flask scikit-learn opencv-python mediapipe tensorflow numpy
     ```
 
 ## Usage
-1. Run the main script:
+1. **Train the Model**  
+    Run the training script to generate the model (`asl.h5`):
     ```bash
-    python app.py
+    python train.py
     ```
-2. Place your hand in the green box.
+
+2. **Test with a Single Image**  
+    Run the test script with an input image:
+    ```bash
+    python test.py path/to/sample_image.png
+    ```
+
+3. **Run Real-time Recognition**  
+    Use your webcam for live predictions:
+    ```bash
+    python main.py
+    ```
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
-1. Fork the repository.
+1. Fork the repository.  
 2. Create a new branch:
     ```bash
     git checkout -b feature-name
