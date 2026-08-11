@@ -26,7 +26,7 @@ hands = mp_hands.Hands(
 )
 
 # Initialize webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture()
 
 while cap.isOpened():
     success, frame = cap.read()
@@ -76,7 +76,7 @@ while cap.isOpened():
                 mp_drawing.DrawingSpec(color=(250, 44, 250)))  # Connections color
     
     # Display the resulting frame
-    cv2.imshow('ASL Hand Sign Recognition', frame)
+    cv2.imshow('Hreco', frame)
     
     # Exit on 'q' key press
     if cv2.waitKey(5) & 0xFF == ord('q'):

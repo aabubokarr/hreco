@@ -61,3 +61,4 @@ if __name__ == "__main__":
     
     # Release MediaPipe resources
     hands.close()
+    

@@ -1,85 +1,92 @@
-# CSE445-Project-MLD
+# Hreco - Hand Sign Recognition
 
-This repository contains the implementation of the Machine Learning-based project for CSE445.
+![Hreco](hreco.png)
+
+Welcome to the **Infy** project! This README provides an overview of the project, setup instructions, and other relevant details.
 
 ## Table of Contents
-- [Introduction](#introduction)
+
+- [Visit](#visit)
+- [About](#about)
 - [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup Instructions](#setup-instructions)
+- [Structure](#structure)
+- [Installation](#installation)
 - [Usage](#usage)
+- [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
-This project focuses on leveraging machine learning techniques to solve the communication gap between those who don't know sign language.  
-The aim is to translate sign language into text (and optionally speech) using a trained deep learning model.
+## Visit
+
+- [Repository](https://github.com/aabubokarr/hreco)
+- [Website](https://aabubokarr.github.io/hreco/)
+
+## About
+
+**Hreco** focuses on leveraging machine learning techniques to solve the communication gap between those who don't know sign language and those who uses sign language. The aim is to translate sign language into text using a trained deep learning model.
 
 ## Features
-- Hand Landmark Extraction using MediaPipe  
-- ASL Hand Sign Recognition using TensorFlow/Keras  
-- Image-based Prediction (`test.py`)  
-- Real-time Prediction via Webcam (`main.py`)  
-- Flask-based Web Application (`app.py`)
 
-## Technologies Used
-- Python  
-- Flask  
-- TensorFlow / Keras  
-- OpenCV  
-- MediaPipe  
-- scikit-learn  
-- Numpy  
+- Hand Landmark Extraction
+- ASL Hand Sign Recognition
+- Image-based Prediction
+- Real-time Prediction via Webcam
 
-## Setup Instructions
+## Structure
+
+
+
+## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/imabu0/CSE445-Project-MLD.git
+    git clone https://github.com/aabubokarr/hreco.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd CSE445-Project-MLD
+    cd hreco
     ```
 3. Install dependencies:
     ```bash
-    pip install flask scikit-learn opencv-python mediapipe tensorflow numpy
-    ```
+    python -m venv .venv
+    source .venv/bin/activate
 
-## Usage
-1. **Train the Model**  
-    Run the training script to generate the model (`asl.h5`):
-    ```bash
-    python train.py
+    python -m pip install --upgrade pip
+    python -m pip install "tensorflow==2.18.0" "keras==3.8.0"
+    python -m pip install "mediapipe==0.10.21"
+    python -m pip install opencv-contrib-python numpy scikit-learn
     ```
-
-2. **Test with a Single Image**  
-    Run the test script with an input image:
-    ```bash
-    python test.py path/to/sample_image.png
-    ```
-
-3. **Run Real-time Recognition**  
-    Use your webcam for live predictions:
+4. Run Real-time Recognition:
     ```bash
     python main.py
     ```
 
+## Contributors
+
+<p align="center">
+  <a href="https://github.com/aabubokarr/hreco/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=aabubokarr/hreco" alt="Contributors" />
+  </a>
+</p>
+
 ## Contributing
+
 Contributions are welcome! Please follow these steps:
-1. Fork the repository.  
+
+1. Fork the repository.
 2. Create a new branch:
-    ```bash
-    git checkout -b feature-name
-    ```
+   ```bash
+   git checkout -b feature-name
+   ```
 3. Commit your changes:
-    ```bash
-    git commit -m "Add feature-name"
-    ```
+   ```bash
+   git commit -m "Add feature-name"
+   ```
 4. Push to the branch:
-    ```bash
-    git push origin feature-name
-    ```
+   ```bash
+   git push origin feature-name
+   ```
 5. Open a pull request.
 
 ## License
+
 This project is licensed under the [MIT License](LICENSE).
