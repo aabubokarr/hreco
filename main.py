@@ -26,7 +26,7 @@ hands = mp_hands.Hands(
 )
 
 # Initialize webcam
-cap = cv2.VideoCapture()
+cap = cv2.VideoCapture(0) # Change the index if you have multiple cameras
 
 while cap.isOpened():
     success, frame = cap.read()

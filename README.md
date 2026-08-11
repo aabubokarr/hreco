@@ -2,16 +2,15 @@
 
 ![Hreco](hreco.png)
 
-Welcome to the **Infy** project! This README provides an overview of the project, setup instructions, and other relevant details.
+Welcome to the **Hreco** project! This README provides an overview of the project, setup instructions, and other relevant details.
 
 ## Table of Contents
 
 - [Visit](#visit)
 - [About](#about)
 - [Features](#features)
-- [Structure](#structure)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Structure](#structure)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
@@ -19,7 +18,6 @@ Welcome to the **Infy** project! This README provides an overview of the project
 ## Visit
 
 - [Repository](https://github.com/aabubokarr/hreco)
-- [Website](https://aabubokarr.github.io/hreco/)
 
 ## About
 
@@ -32,11 +30,8 @@ Welcome to the **Infy** project! This README provides an overview of the project
 - Image-based Prediction
 - Real-time Prediction via Webcam
 
-## Structure
-
-
-
 ## Installation
+
 1. Clone the repository:
     ```bash
     git clone https://github.com/aabubokarr/hreco.git
@@ -51,14 +46,35 @@ Welcome to the **Infy** project! This README provides an overview of the project
     source .venv/bin/activate
 
     python -m pip install --upgrade pip
-    python -m pip install "tensorflow==2.18.0" "keras==3.8.0"
-    python -m pip install "mediapipe==0.10.21"
-    python -m pip install opencv-contrib-python numpy scikit-learn
+    python -m pip install -r requirements.txt
     ```
 4. Run Real-time Recognition:
     ```bash
     python main.py
     ```
+
+## Structure
+
+```
+hreco/
+├── test/                   # Images for testing the model
+│   ├── a.jpeg
+│   ├── b.jpg
+│   ├── c.jpg
+│   ├── ...
+│   └── z.jpg
+├── .gitignore              # Git ignored files and folders
+├── asl.h5                  # Trained model
+├── class_names.npy         # ASL class names
+├── LICENSE                 # MIT License file
+├── main.py                 # Real-time ASL recognition using webcam
+├── README.md               # Project documentation
+├── requirements.txt        # Python dependencies
+├── test.py                 # Test model predictions
+├── train.py                # Train the ASL recognition model
+├── X.npy                   # Extracted feature data
+└── y.npy                   # Corresponding labels
+```
 
 ## Contributors
 
